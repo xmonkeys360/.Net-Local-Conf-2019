@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AzureFunction.MainPage">
+
+    <Grid>
+        <StackLayout Padding="20">
+            <Entry x:Name="UserName" Placeholder="Enter name..." />
+            <Label x:Name="ResultLabel" Text="Welcome to Xamarin.Forms..!" FontSize="Large" />
+            <Button x:Name="ExecuteAzureFunction" Text="Execute Azure Function" Clicked="ExecuteAzureFunction_Clicked" />
+        </StackLayout>
+        <ContentView x:Name="Overlay" Opacity="0.3" BackgroundColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsVisible="False" />
+        <ActivityIndicator x:Name="BusyIndicator" IsRunning="True" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="100" WidthRequest="100" IsVisible="False" />
+    </Grid>
+
+</ContentPage>
